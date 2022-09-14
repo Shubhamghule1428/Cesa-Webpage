@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./pages/Header";
+import Eventform from "./pages/Eventform";
+import Events from "./pages/Events";
+import Core from "./pages/Core";
+import Contact from "./pages/Contact";
+import Teams from "./pages/Teams";
+
+import Sidebar from "./components/sidebar/Sidebar";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <Router>
+        <Sidebar>
+          <Routes>
+            <Route path="/" element={<Header />} />
+            <Route path="/Events" element={<Events />} />
+            <Route path="/Eventform" element={<Eventform />} />
+            <Route path="/Core" element={<Core />} />
+            <Route path="/Teams" element={<Teams />} />
+            <Route path="/Contact" element={<Contact />} />
+          </Routes>
+        </Sidebar>
+        <>
+          <Footer />
+        </>
+      </Router>
+    </body>
   );
 }
 

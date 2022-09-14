@@ -1,0 +1,102 @@
+.contact-box {
+  background: var(--color-primary-variants);
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+.container.contact_container {
+  display: flex;
+  padding: 2rem 1.2rem;
+  flex-direction: column;
+  gap: 12%;
+}
+
+.contact_options {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1.2rem;
+}
+
+.contact_option {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  width: 100%;
+  margin: 0 auto 3rem;
+  border-radius: 1.2rem;
+  align-items: center;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transiton);
+  overflow: hidden;
+}
+
+.contact_option:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+.contact_option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact_option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--color-primary-variant);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary-variant);
+  resize: none;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+input,
+textarea:hover {
+  color: var(--color-white);
+  background-color: var(--color-bg-variant);
+}
+button {
+  border: transparent;
+  border-radius: 0.8rem;
+  background: var(--color-primary-variant);
+  color: var(--color-primary);
+  padding: 15px 10px;
+  transition: all 400ms ease-in-out;
+}
+
+button:hover {
+  border: var(--color-primary-variant) 2px solid;
+  background: transparent;
+  color: blue;
+  transition: all 400ms ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-box {
+    margin: 0 auto 3rem;
+  }
+  .container.contact_container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container.contact_container {
+    width: var(--container-sm);
+  }
+  .contact_options {
+    flex-direction: column;
+  }
+}
