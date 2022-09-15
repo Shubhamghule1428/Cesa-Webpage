@@ -1,17 +1,20 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+const Header = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
-export class Header extends Component {
-  render() {
-    return (
-      <section id="header" className="Header">
-        <div className="header_container">
-          <h2>CESA</h2>
-          <small>limitless,, Unforgive, Hardworking</small>
-        </div>
-        <div className="header_main"></div>
-      </section>
-    );
-  }
-}
+  return (
+    <section id="header" className="Header">
+      <div className="header_container">
+        <h2 className="Brand_Name">CESA</h2>
+        <small>limitless,, Unforgive, Hardworking</small>
+      </div>
+      <div className="header_main"></div>
+    </section>
+  );
+};
 
 export default Header;

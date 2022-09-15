@@ -9,6 +9,7 @@ import Teams from "./pages/Teams";
 
 import Sidebar from "./components/sidebar/Sidebar";
 import Footer from "./components/footer/Footer";
+import BackToTop from "./components/BackToTop/BackToTop";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         </Sidebar>
         <>
           <Footer />
+          <BackToTop />
         </>
       </Router>
     </body>

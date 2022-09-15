@@ -29,7 +29,34 @@
   transition: var(--transiton);
   overflow: hidden;
 }
-
+.contact_option:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.contact_option:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.contact_option:hover:after {
+  left: 100%;
+}
 .contact_option:hover {
   background: transparent;
   border-color: var(--color-primary-variant);
