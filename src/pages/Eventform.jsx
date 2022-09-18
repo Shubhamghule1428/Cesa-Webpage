@@ -8,6 +8,8 @@ import IMG4 from "../assets/event3.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 const data = [
   {
@@ -47,6 +49,14 @@ const Eventform = () => {
 
   return (
     <section id="LiveEvent">
+      <div className="img-slider">
+        <AliceCarousel autoPlay autoPlayInterval="3000">
+          <img src={IMG1} className="sliderimg" alt="" />
+          <img src={IMG2} className="sliderimg" alt="" />
+          <img src={IMG3} className="sliderimg" alt="" />
+          <img src={IMG4} className="sliderimg" alt="" />
+        </AliceCarousel>
+      </div>
       <h5 data-aos="fade-up">Our Live Events</h5>
       <h2 data-aos="fade-up">CESA Events</h2>
 
