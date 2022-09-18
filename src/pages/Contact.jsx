@@ -82,7 +82,12 @@ const contact = (props) => {
             placeholder="Your message"
             required
           ></textarea>
-          <button type="submit" href="#" className="btn btn-primary">
+          <button
+            data-aos="fade-in"
+            type="submit"
+            href="#"
+            className="btn btn-primary"
+          >
             Send Message
           </button>
         </form>

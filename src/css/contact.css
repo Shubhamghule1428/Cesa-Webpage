@@ -22,7 +22,7 @@
   padding: 1.2rem;
   width: 100%;
   margin: 0 auto 3rem;
-  border-radius: 1.2rem;
+  border-radius: 0;
   align-items: center;
   text-align: center;
   border: 1px solid transparent;
@@ -83,7 +83,7 @@ input,
 textarea {
   width: 100%;
   padding: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 00.5r;
   background: transparent;
   border: 2px solid var(--color-primary-variant);
   resize: none;
@@ -97,13 +97,32 @@ textarea:hover {
 }
 button {
   border: transparent;
-  border-radius: 0.8rem;
+  border-radius: 0;
   background: var(--color-primary-variant);
   color: var(--color-primary);
   padding: 15px 10px;
   transition: all 400ms ease-in-out;
+  overflow: hidden;
 }
-
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+button:hover:after {
+  left: 100%;
+}
 button:hover {
   border: var(--color-primary-variant) 2px solid;
   background: transparent;

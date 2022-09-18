@@ -3,43 +3,71 @@ import "./footer.css";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { AiFillTwitterSquare } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <footer>
-      <a href="#" className="footer_logo">
+      <a data-aos="fade-in" href="#" className="footer_logo">
         CESA
       </a>
       <ul className="permalinks">
         <li>
-          <a href="#">Home</a>
+          <a data-aos="fade-in" href="#">
+            Home
+          </a>
         </li>
         <li>
-          <a href="#Events">Event</a>
+          <a data-aos="fade-in" href="#Events">
+            Event
+          </a>
         </li>
         <li>
-          <a href="#experince">Community</a>
+          <a data-aos="fade-in" href="#experince">
+            Community
+          </a>
         </li>
         <li>
-          <a href="#portfolio">Teams</a>
+          <a data-aos="fade-in" href="#portfolio">
+            Teams
+          </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a data-aos="fade-in" href="#contact">
+            Contact
+          </a>
         </li>
       </ul>
 
       <div className="footer_socials">
-        <a href="https://www.facebook.com/shubham.ghule.vip" target={1}>
+        <a
+          data-aos="fade-up"
+          href="https://www.facebook.com/shubham.ghule.vip"
+          target={1}
+        >
           <AiOutlineFacebook />
         </a>
-        <a href="https://twitter.com/shivamsg1428" target={1}>
+        <a
+          data-aos="fade-up"
+          href="https://twitter.com/shivamsg1428"
+          target={1}
+        >
           <AiFillTwitterSquare />
         </a>
-        <a href="https://www.instagram.com/mr_shivam_ghule/" target={1}>
+        <a
+          data-aos="fade-up"
+          href="https://www.instagram.com/mr_shivam_ghule/"
+          target={1}
+        >
           <AiOutlineInstagram />
         </a>
       </div>
-      <div className="footer_copyright">
+      <div data-aos="fade-left" className="footer_copyright">
         <small>&copy; CESA: All copyrights are reserved</small>
       </div>
     </footer>

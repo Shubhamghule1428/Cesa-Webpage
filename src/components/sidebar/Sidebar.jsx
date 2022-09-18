@@ -25,7 +25,7 @@ const routes = [
   },
   {
     path: "/Eventform",
-    name: "Register",
+    name: "Live Events",
     icon: <GiArchiveRegister />,
   },
   {
